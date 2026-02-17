@@ -6,6 +6,19 @@
   <title>J9's Boardgame Finder</title>
 
   <style>
+    
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* safety net */
+}
+    
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -57,7 +70,8 @@
     }
 
     body.results-page {
-      display: block;
+      justify-content: center;
+  align-items: center;
       background-color:#e0e1d5;
     }
 
@@ -112,7 +126,7 @@ button:hover {
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url("https://image2url.com/r2/default/files/1770909023927-76cf5602-ae0a-4fc9-afd1-2bb3930cd770.png");
-      padding: 60px;
+      padding: 50px;
       text-align: left;
       font-size: 17px;
     }
