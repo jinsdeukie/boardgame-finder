@@ -15,6 +15,7 @@
       justify-content: center;
       align-items: center;
         caret-color: transparent;
+      
 
     }
     
@@ -51,11 +52,13 @@
 
     /* Backgrounds per "page" (we toggle body class in JS) */
     body.home-page {
-      background: url("https://i.imgur.com/nsuBCGC.jpeg") center/cover no-repeat fixed;
+      
+      background-color:#301b1b;
     }
 
     body.results-page {
-      background: url("https://i.imgur.com/JrfQhQu.jpeg") center/cover no-repeat fixed;
+      
+      background-color:#e0e1d5;
     }
 
     .container {
@@ -82,7 +85,7 @@ button:hover {
     /* PAGE 1 layout */
     .split {
       display: flex;
-      gap: 16px;
+      gap: 36px;
       justify-content: space-between;
       align-items: center;
     }
@@ -91,8 +94,8 @@ button:hover {
     .left-pane { text-align: center; }
 
     .hero-img {
-      width: 450px;
-      margin: 20px auto;
+      width: 360px;
+      margin: 0px auto;
       cursor: pointer;
       display: block;
       align: center;
@@ -607,11 +610,10 @@ if (headerImage) {
     // shuffle a COPY so you don't mess up the original order
     const shuffled = shuffleArray([...filtered]);
 
-    // take top 3 after shuffle
-    const top3 = shuffled.slice(0, 3);
-
-    showResults(top3, "Top Results", "https://i.imgur.com/aZxq2ew.png");
-  }
+    
+  // show ALL matched results (no slice)
+  showResults(shuffled, "Matched Results", "https://i.imgur.com/aZxq2ew.png");
+}
 
     function randomGame() {
   const shuffled = shuffleArray([...games]);
@@ -636,6 +638,8 @@ if (headerImage) {
       document.getElementById("resultsPage").style.display = "none";
       document.getElementById("searchPage").style.display = "block";
     }
+    
+    
   </script>
 </body>
 </html>
